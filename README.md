@@ -28,7 +28,7 @@ The model is composed of:
 * A convolutional feature extractor (ResNet-101) which provides a latent representation of video frames
 * A bi-directional LSTM classifier which based on the latent representation of the video predicts the activity depicted
 
-I have made a trained model available [here](https://drive.google.com/open?id=1GlpN0m9uLbI9dg1ARbW9hDEf-VWe4Asl).
+I have made a trained model available [here](https://drive.google.com/open?id=1EWprDnL2XCGIhBW8tpx5NC-Y0eHuW5ot).
 
 ### Train  
 
@@ -42,8 +42,9 @@ $ python3 train.py  --dataset_path  \
 ```
 
 ### Test on Video
+[Here](https://drive.google.com/open?id=1TmOUmDIZbuXJPQp9nxIS-KR_pBLZxxrO) is the link for five test video samples.
 
-Download the testing videos into the file test/test_videos/, and download the pretained model into the file model_checkpoints/
+Download the testing videos into the file test/test_videos/, and download the tained model into the file model_checkpoints/
 
 ```
 $ python3 test_on_video.py  --video_path  \
