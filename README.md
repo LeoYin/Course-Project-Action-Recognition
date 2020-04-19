@@ -49,7 +49,7 @@ The frame data should be saved as the following
     VideoClip_Name/
     Number.jpg
 ```
-
+Then traning the data
 ```
 $ python3 train.py  --dataset_path  \ 
                     --num_epochs  \
