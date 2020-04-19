@@ -43,12 +43,12 @@ and  a trained model from optical flow frames available [here](https://drive.goo
 
 ### Train  
 The frame data should be saved as the following
-
+```
 /data/videos-instance
     Class_Name/
     VideoClip_Name/
     Number.jpg
-
+```
 
 ```
 $ python3 train.py  --dataset_path  \ 
