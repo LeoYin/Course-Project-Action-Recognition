@@ -17,8 +17,17 @@ $ bash download_videos.sh     # Downloads the DALY dataset
 Then, moving the data file into the data file and rename is as 'videos'
 ```
 $ cd data/
-$ python3 extract_frames.py   # Extracts frames from the video
+# Extracts optical flow frames from the video
+$ python3 extract_frames.py   --dataset_path  \
+                              --annot_path daly1.1.0.pkl  # Anotation of the original videos
 ```
+
+## Optical flow frames
+If you want to convert the RGB videos into optical flow videos
+```
+$python OpticalFlow.py   --video_path
+```
+
 
 ## ConvLSTM
 
@@ -28,12 +37,21 @@ The model is composed of:
 * A convolutional feature extractor (ResNet-101) which provides a latent representation of video frames
 * A bi-directional LSTM classifier which based on the latent representation of the video predicts the activity depicted
 
-I have made a trained model available [here](https://drive.google.com/open?id=1EWprDnL2XCGIhBW8tpx5NC-Y0eHuW5ot).
+I have made a trained model from RGB frames available [here](https://drive.google.com/open?id=1EWprDnL2XCGIhBW8tpx5NC-Y0eHuW5ot).
+
+and  a trained model from optical flow frames available [here](https://drive.google.com/open?id=1TEj2SF22qO0Q4QRcL_2g_CO-hmAKrEc7).
 
 ### Train  
+The frame data should be saved as the following
+
+/data/videos-instance
+    Class_Name/
+    VideoClip_Name/
+    Number.jpg
+
 
 ```
-$ python3 train.py  --dataset_path  \
+$ python3 train.py  --dataset_path  \ 
                     --num_epochs  \
                     --batch_size \
                     --sequence_length \
@@ -47,9 +65,13 @@ $ python3 train.py  --dataset_path  \
 Download the testing videos into the file test/test_videos/, and download the tained model into the file model_checkpoints/
 
 ```
-$ python3 test_on_video.py  --video_path  \
-                            --checkpoint_model 
+$ python3 test_on_video.py  --video_path  \  # the files including the test videos (mp4 format)
+                            --save_path  \  # 
+                            --checkpoint_model1  \  # the trained model from RGB frames
+                            --checkpoint_model2  \  # the trained model from optical flow frames
 ```
+
+The output includes
 
 
 
