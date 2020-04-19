@@ -71,7 +71,6 @@ $ python3 test_on_video.py  --video_path  \  # the files including the test vide
                             --checkpoint_model2  \  # the trained model from optical flow frames
 ```
 
-The output includes
 
 
 
