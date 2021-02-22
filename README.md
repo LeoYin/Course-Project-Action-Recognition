@@ -1,4 +1,4 @@
-# Action Recognition in Video
+# CSCE-689-Course-Project: Action Recognition in Videos
 
 This is the course project of Lihao Yin in CSCE 689
 
