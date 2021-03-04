@@ -2,9 +2,9 @@
 
 This is the course project of Lihao Yin in CSCE 689
 
-This report will serve as my course project 4 where I investigate neural network models for action recognition. I will attempt to detect the action 'Phoning'
+This report will serve as my course project 4 where I investigate neural network models for action recognition.
 
-I will mainly use the [DALY dataset](http://thoth.inrialpes.fr/daly/index.php ).
+I used the [DALY dataset](http://thoth.inrialpes.fr/daly/index.php ).
 
 
 ## Download videos
